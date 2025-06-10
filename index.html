@@ -45,6 +45,105 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
+        .brand-text {
+            background: linear-gradient(45deg, #fff, #ffd700, #fff, #ffa726);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: brandGlow 3s ease-in-out infinite;
+            font-family: 'Poppins', serif;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .brand-text::before {
+            content: 'SWAAD SUTRA';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, #ff6b35, #ffa726);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: -1;
+            filter: blur(2px);
+        }
+
+        .hero-brand {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #fff, #ffd700, #fff, #ffa726);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: heroGlow 4s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: 'Poppins', serif;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .hero-brand::after {
+            content: '✨';
+            position: absolute;
+            right: -50px;
+            top: -10px;
+            font-size: 2rem;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .hero-brand::before {
+            content: '🍛';
+            position: absolute;
+            left: -60px;
+            top: -5px;
+            font-size: 2.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .footer-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #fff, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        @keyframes brandGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes heroGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                transform: scale(1);
+            }
+            50% { 
+                background-position: 100% 50%;
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.7; }
+            50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
         .nav-link {
             color: white !important;
             font-weight: 500;
@@ -136,6 +235,8 @@
             margin-bottom: 3rem;
             text-align: center;
             position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .section-title::after {
@@ -148,6 +249,16 @@
             height: 4px;
             background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
             border-radius: 2px;
+        }
+
+        .section-title::before {
+            content: '🌟';
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            animation: sparkle 2s ease-in-out infinite;
         }
 
         .card {
@@ -244,19 +355,56 @@
         .banner-section {
             margin: 4rem 0;
             text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
         }
 
         .banner-img {
-            max-width: 100%;
+            max-width: 90%;
+            max-height: 400px;
             height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
         }
 
         .banner-img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            transform: scale(1.03) rotateX(2deg);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+        }
+
+        .logo-hero {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3));
+            transition: all 0.4s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .logo-hero:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 20px 35px rgba(0,0,0,0.4));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .navbar-brand img {
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.1);
+        }
+
+        .footer-logo {
+            filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.5));
         }
 
         .live-status {
@@ -344,8 +492,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" height="40" class="me-2">
-                <strong>SWAAD SUTRA</strong>
+                <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" height="45" class="me-3">
+                <span class="brand-text">SWAAD SUTRA</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -374,13 +522,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
-                    <h1 class="hero-title"><strong>SWAAD SUTRA</strong></h1>
+                    <h1 class="hero-brand">SWAAD SUTRA</h1>
                     <p class="hero-subtitle">Authentic Home-Made Indian Food Delivered with Love</p>
                     
                     <div class="delivery-info">
                         <div class="d-flex align-items-center mb-3">
-                        <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" height="40" class="me-2">
-                        <h4><strong>SWAAD SUTRA</strong></h4>
+                        <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" height="50" class="me-3 footer-logo">
+                        <h4 class="footer-brand">SWAAD SUTRA</h4>
                     </div>
                     <p class="mb-3">Bringing authentic home-made Indian flavors to your doorstep with love, care, and traditional recipes passed down through generations.</p>
                     <div class="mb-2">
@@ -433,7 +581,7 @@
             
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0">&copy; 2024 <strong>SWAAD SUTRA</strong>. All rights reserved. Made with ❤️ in Jharkhand</p>
+                    <p class="mb-0">&copy; 2024 <span class="footer-brand">SWAAD SUTRA</span>. All rights reserved. Made with ❤️ in Jharkhand</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <small>
@@ -471,7 +619,7 @@
                     </button>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" class="img-fluid" style="max-width: 400px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));">
+                    <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" class="img-fluid logo-hero">
                 </div>
             </div>
         </div>
@@ -480,7 +628,19 @@
     <!-- Banner Section -->
     <section class="banner-section">
         <div class="container">
-            <img src="https://i.postimg.cc/pXR76Wdw/You-Tube-Banner-Swaad-Sutra-Delivery.png" alt="Swaad Sutra Delivery Banner" class="banner-img">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h3 class="mb-4" style="color: var(--primary-color); font-weight: 700;">
+                        <strong>🍽️ AUTHENTIC FLAVORS • DELIVERED WITH LOVE 🚚</strong>
+                    </h3>
+                    <img src="https://i.postimg.cc/pXR76Wdw/You-Tube-Banner-Swaad-Sutra-Delivery.png" alt="Swaad Sutra Delivery Banner" class="banner-img">
+                    <div class="mt-4">
+                        <span class="badge-special">🎯 <strong>TARGET: 30 MIN DELIVERY</strong></span>
+                        <span class="badge-special">🔥 <strong>HOT & FRESH GUARANTEED</strong></span>
+                        <span class="badge-special">💯 <strong>100% SATISFACTION</strong></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -748,4 +908,3 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="d-flex align-items-center mb-3">
-                        

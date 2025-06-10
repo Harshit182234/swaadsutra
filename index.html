@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swaad Sutra - Authentic Home-Made Food Delivery</title>
-    <meta name="description" content="Swaad Sutra delivers authentic home-made Indian food with love. Order fresh lunch talis, traditional meals, and homestyle cooking delivered hot to your doorstep in 30 minutes.">
-    <meta name="keywords" content="food delivery, home-made food, Indian cuisine, lunch tali, authentic food, Swaad Sutra, traditional meals, fresh cooking">
+    <title>Swaad Sutra - Authentic Home-Style Food Delivery | Fresh & Fast</title>
+    <meta name="description" content="Swaad Sutra delivers authentic home-style Indian food including lunch thalis, traditional meals, and fresh homemade dishes. Fast delivery, quality ingredients, experienced delivery partners. Order now for the taste of home!">
+    <meta name="keywords" content="food delivery, Indian food, lunch thali, homemade food, authentic cuisine, fast delivery, Swaad Sutra, traditional meals, fresh food">
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary-color: #ff6b35;
-            --secondary-color: #2c5f2d;
-            --accent-color: #ffa726;
+            --secondary-color: #2c5530;
+            --accent-color: #ffd23f;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
-            --success-color: #27ae60;
+            --bg-light: #f8f9fa;
         }
 
         * {
@@ -32,402 +37,7 @@
             overflow-x: hidden;
         }
 
-        .navbar {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: white !important;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .brand-text {
-            background: linear-gradient(45deg, #fff, #ffd700, #fff, #ffa726);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: brandGlow 3s ease-in-out infinite;
-            font-family: 'Poppins', serif;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            position: relative;
-        }
-
-        .brand-text::before {
-            content: 'SWAAD SUTRA';
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: linear-gradient(45deg, #ff6b35, #ffa726);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            z-index: -1;
-            filter: blur(2px);
-        }
-
-        .hero-brand {
-            font-size: 4rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, #fff, #ffd700, #fff, #ffa726);
-            background-size: 400% 400%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: heroGlow 4s ease-in-out infinite;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-family: 'Poppins', serif;
-            position: relative;
-            margin-bottom: 1rem;
-        }
-
-        .hero-brand::after {
-            content: '✨';
-            position: absolute;
-            right: -50px;
-            top: -10px;
-            font-size: 2rem;
-            animation: sparkle 2s ease-in-out infinite;
-        }
-
-        .hero-brand::before {
-            content: '🍛';
-            position: absolute;
-            left: -60px;
-            top: -5px;
-            font-size: 2.5rem;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        .footer-brand {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(45deg, #fff, #ffd700);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        @keyframes brandGlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes heroGlow {
-            0%, 100% { 
-                background-position: 0% 50%;
-                transform: scale(1);
-            }
-            50% { 
-                background-position: 100% 50%;
-                transform: scale(1.02);
-            }
-        }
-
-        @keyframes sparkle {
-            0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.7; }
-            50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .nav-link {
-            color: white !important;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-color) !important;
-            transform: translateY(-2px);
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .delivery-info {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .delivery-time {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, var(--accent-color), #ff8f00);
-            border: none;
-            padding: 12px 30px;
-            font-weight: 600;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 171, 38, 0.4);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-            text-align: center;
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border-radius: 2px;
-        }
-
-        .section-title::before {
-            content: '🌟';
-            position: absolute;
-            left: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.5rem;
-            animation: sparkle 2s ease-in-out infinite;
-        }
-
-        .card {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-
-        .food-item {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .food-price {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .badge-special {
-            background: linear-gradient(45deg, var(--success-color), #2ecc71);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-weight: 500;
-            margin: 5px;
-        }
-
-        .partner-card {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .partner-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .partner-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .footer {
-            background: linear-gradient(135deg, var(--text-dark), #34495e);
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .contact-info {
-            background: rgba(255,255,255,0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-            transform: translateY(-3px);
-        }
-
-        .banner-section {
-            margin: 4rem 0;
-            text-align: center;
-            padding: 2rem 0;
-            background: linear-gradient(135deg, #f8f9fa, #ffffff);
-        }
-
-        .banner-img {
-            max-width: 90%;
-            max-height: 400px;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            transition: all 0.4s ease;
-            object-fit: cover;
-            border: 3px solid var(--accent-color);
-        }
-
-        .banner-img:hover {
-            transform: scale(1.03) rotateX(2deg);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-        }
-
-        .logo-hero {
-            max-width: 350px;
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3));
-            transition: all 0.4s ease;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .logo-hero:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0 20px 35px rgba(0,0,0,0.4));
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .navbar-brand img {
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
-            transition: all 0.3s ease;
-        }
-
-        .navbar-brand:hover img {
-            transform: scale(1.1);
-        }
-
-        .footer-logo {
-            filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.5));
-        }
-
-        .live-status {
-            display: inline-flex;
-            align-items: center;
-            background: var(--success-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            margin: 10px;
-            animation: pulse 2s infinite;
-        }
-
-        .live-dot {
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: blink 1s infinite;
-        }
-
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -439,61 +49,331 @@
             }
         }
 
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
+            0% { transform: scale(1); }
             50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        .stats-section {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 4rem 0;
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
         }
 
-        .stat-card {
-            text-align: center;
-            padding: 2rem;
+        .animate-slideInRight {
+            animation: slideInRight 0.8s ease-out;
         }
 
-        .stat-number {
-            font-size: 3rem;
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .rotate-on-hover {
+            transition: transform 0.5s ease;
+        }
+
+        .rotate-on-hover:hover {
+            transform: rotate(360deg);
+        }
+
+        /* Header */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 900;
+            font-size: 2.2rem;
+            color: white !important;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.1);
+            color: var(--accent-color) !important;
+            text-shadow: 0 0 20px rgba(255,210,63,0.8);
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(255,107,53,0.9), rgba(44,85,48,0.8)), 
+                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3') center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 3px;
+            color: white;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .brand-logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+        }
+
+        .banner-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            margin-top: 2rem;
+        }
+
+        /* Description Section */
+        .description-section {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .description-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary-color);
+            margin: 2rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Delivery Info */
+        .delivery-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+        }
+
+        .delivery-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .live-timer {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Food Menu */
+        .menu-section {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .food-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .food-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .food-content {
+            padding: 1.5rem;
+        }
+
+        .food-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-dark);
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            font-weight: 500;
+        .food-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
         }
 
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: var(--text-dark);
+            color: white;
+        }
+
+        .contact-info {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Buttons */
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255,107,53,0.4);
+            color: white;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
             }
             
             .hero-subtitle {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             
-            .section-title {
-                font-size: 2rem;
+            .banner-image {
+                transform: none;
+                margin-top: 2rem;
             }
+        }
+
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-animate.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" height="45" class="me-3">
-                <span class="brand-text">SWAAD SUTRA</span>
+            <a class="navbar-brand animate-pulse" href="#home">
+                <strong>SWAAD SUTRA</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -502,6 +382,9 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#menu">Menu</a>
@@ -520,156 +403,166 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 hero-content">
-                    <h1 class="hero-brand">SWAAD SUTRA</h1>
-                    <p class="hero-subtitle">Authentic Home-Made Indian Food Delivered with Love</p>
-                    
-                    <div class="delivery-info">
-                        <div class="d-flex align-items-center mb-3">
-                        <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" height="50" class="me-3 footer-logo">
-                        <h4 class="footer-brand">SWAAD SUTRA</h4>
-                    </div>
-                    <p class="mb-3">Bringing authentic home-made Indian flavors to your doorstep with love, care, and traditional recipes passed down through generations.</p>
-                    <div class="mb-2">
-                        <i class="fas fa-award text-warning me-2"></i>
-                        <strong>ISO Certified Kitchen</strong>
-                    </div>
-                    <div class="mb-2">
-                        <i class="fas fa-leaf text-success me-2"></i>
-                        <strong>100% Fresh Ingredients</strong>
-                    </div>
-                    <div class="mb-2">
-                        <i class="fas fa-heart text-danger me-2"></i>
-                        <strong>Made with Love</strong>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5><strong>Quick Links</strong></h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#home" class="text-light text-decoration-none">🏠 Home</a></li>
-                        <li><a href="#menu" class="text-light text-decoration-none">🍽️ Our Menu</a></li>
-                        <li><a href="#delivery" class="text-light text-decoration-none">🚚 Delivery Info</a></li>
-                        <li><a href="#contact" class="text-light text-decoration-none">📞 Contact Us</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">📱 Download App</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">💳 Payment Options</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5><strong>Delivery Areas</strong></h5>
-                    <ul class="list-unstyled">
-                        <li>📍 <strong>Dhanbad City Center</strong></li>
-                        <li>📍 <strong>Jharia</strong></li>
-                        <li>📍 <strong>Sindri</strong></li>
-                        <li>📍 <strong>Bokaro Steel City</strong></li>
-                        <li>📍 <strong>Chas</strong></li>
-                        <li>📍 <strong>Govindpur</strong></li>
-                    </ul>
-                    <div class="mt-3">
-                        <h6><strong>Payment Methods</strong></h6>
-                        <div class="d-flex flex-wrap">
-                            <span class="badge bg-light text-dark me-2 mb-2">💳 Cards</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">📱 UPI</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">💰 Cash</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">🏦 Net Banking</span>
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content animate-fadeInUp">
+                        <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" class="brand-logo rotate-on-hover">
+                        <h1 class="hero-title"><strong>SWAAD SUTRA</strong></h1>
+                        <p class="hero-subtitle">Experience the <strong>Authentic Taste of Home</strong> - Delivered Fresh & Fast!</p>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <span class="badge bg-warning text-dark fs-6 px-3 py-2">🏠 Homemade Quality</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">🚚 30-Min Delivery</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">🍛 Traditional Thalis</span>
                         </div>
+                        <a href="#menu" class="btn-primary-custom">
+                            <i class="fas fa-utensils me-2"></i>Order Now
+                        </a>
                     </div>
                 </div>
-            </div>
-            
-            <hr class="my-4">
-            
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2024 <span class="footer-brand">SWAAD SUTRA</span>. All rights reserved. Made with ❤️ in Jharkhand</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <small>
-                        <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
-                        <a href="#" class="text-light text-decoration-none me-3">Terms & Conditions</a>
-                        <a href="#" class="text-light text-decoration-none">Refund Policy</a>
-                    </small>
-                </div>
-            </div>
-            
-            <div class="text-center mt-3">
-                <div class="live-status">
-                    <div class="live-dot"></div>
-                    <strong>KITCHEN LIVE • ACCEPTING ORDERS NOW</strong>
-                            <div class="live-status">
-                                <div class="live-dot"></div>
-                                <strong>LIVE NOW</strong>
-                            </div>
-                            <span class="delivery-time ms-3"><strong>30 MIN</strong> Delivery</span>
-                        </div>
-                        <p class="mb-0"><strong>Fresh • Authentic • Homestyle Cooking</strong></p>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <span class="badge-special">✨ <strong>FREE DELIVERY</strong> on orders above ₹299</span>
-                        <span class="badge-special">🏠 <strong>HOME-MADE QUALITY</strong></span>
-                        <span class="badge-special">⚡ <strong>LIGHTNING FAST</strong></span>
-                    </div>
-                    
-                    <button class="btn btn-primary btn-lg me-3">
-                        <i class="fas fa-shopping-cart me-2"></i><strong>ORDER NOW</strong>
-                    </button>
-                    <button class="btn btn-outline-light btn-lg">
-                        <i class="fas fa-phone me-2"></i>Call Us
-                    </button>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://i.postimg.cc/xTh75KWd/Warm-Emblem-Logo-for-Swaad-Sutra.png" alt="Swaad Sutra Logo" class="img-fluid logo-hero">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Banner Section -->
-    <section class="banner-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <h3 class="mb-4" style="color: var(--primary-color); font-weight: 700;">
-                        <strong>🍽️ AUTHENTIC FLAVORS • DELIVERED WITH LOVE 🚚</strong>
-                    </h3>
-                    <img src="https://i.postimg.cc/pXR76Wdw/You-Tube-Banner-Swaad-Sutra-Delivery.png" alt="Swaad Sutra Delivery Banner" class="banner-img">
-                    <div class="mt-4">
-                        <span class="badge-special">🎯 <strong>TARGET: 30 MIN DELIVERY</strong></span>
-                        <span class="badge-special">🔥 <strong>HOT & FRESH GUARANTEED</strong></span>
-                        <span class="badge-special">💯 <strong>100% SATISFACTION</strong></span>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                    <div class="animate-slideInRight">
+                        <img src="https://i.postimg.cc/pXR76Wdw/You-Tube-Banner-Swaad-Sutra-Delivery.png" alt="Swaad Sutra Delivery Banner" class="banner-image rotate-on-hover">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
+    <!-- About Section -->
+    <section id="about" class="description-section">
         <div class="container">
+            <h2 class="section-title scroll-animate"><strong>About SWAAD SUTRA</strong></h2>
             <div class="row">
-                <div class="col-md-3 col-6">
-                    <div class="stat-card">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label"><strong>Happy Customers</strong></div>
+                <div class="col-lg-8 mx-auto">
+                    <div class="description-box scroll-animate">
+                        <h3 class="text-primary mb-3"><strong>🍛 Your Gateway to Authentic Indian Cuisine</strong></h3>
+                        <p class="lead mb-4">
+                            <strong>Swaad Sutra</strong> brings you the most <strong>authentic home-style Indian food</strong> right to your doorstep. We specialize in <strong>traditional lunch thalis, homemade curries, fresh rotis, and regional delicacies</strong> that taste just like your grandmother's cooking.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h5 class="text-secondary"><strong>🥘 Our Specialties:</strong></h5>
+                                <ul class="list-unstyled">
+                                    <li>✅ <strong>Complete Lunch Thalis</strong></li>
+                                    <li>✅ <strong>Homemade Dal & Sabzi</strong></li>
+                                    <li>✅ <strong>Fresh Rotis & Rice</strong></li>
+                                    <li>✅ <strong>Traditional Sweets</strong></li>
+                                    <li>✅ <strong>Regional Specialties</strong></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-secondary"><strong>🌟 Why Choose Us:</strong></h5>
+                                <ul class="list-unstyled">
+                                    <li>🔥 <strong>Fresh ingredients daily</strong></li>
+                                    <li>👩‍🍳 <strong>Expert home chefs</strong></li>
+                                    <li>⚡ <strong>Lightning-fast delivery</strong></li>
+                                    <li>💰 <strong>Affordable pricing</strong></li>
+                                    <li>❤️ <strong>Made with love</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-warning mt-4">
+                            <h6><strong>🏷️ True Tags:</strong></h6>
+                            <span class="badge bg-primary me-2">#AuthenticIndianFood</span>
+                            <span class="badge bg-success me-2">#HomemadeQuality</span>
+                            <span class="badge bg-warning text-dark me-2">#FastDelivery</span>
+                            <span class="badge bg-info me-2">#TraditionalThali</span>
+                            <span class="badge bg-secondary me-2">#FreshIngredients</span>
+                            <span class="badge bg-danger me-2">#TasteOfHome</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-card">
-                        <div class="stat-number">30</div>
-                        <div class="stat-label"><strong>Minutes Delivery</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title scroll-animate"><strong>Why SWAAD SUTRA?</strong></h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card scroll-animate">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4><strong>30-Min Delivery</strong></h4>
+                        <p>Lightning-fast delivery within 30 minutes to your doorstep</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-card">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label"><strong>Menu Items</strong></div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card scroll-animate">
+                        <div class="feature-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4><strong>Homemade Quality</strong></h4>
+                        <p>Every dish prepared with love using traditional family recipes</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-card">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label"><strong>Service</strong></div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card scroll-animate">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4><strong>Fresh Ingredients</strong></h4>
+                        <p>Sourced daily from local markets for maximum freshness</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card scroll-animate">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4><strong>5-Star Quality</strong></h4>
+                        <p>Consistently rated 5-stars by our satisfied customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="delivery-section">
+        <div class="container">
+            <h2 class="section-title text-white scroll-animate"><strong>Delivery Information</strong></h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="delivery-card scroll-animate">
+                        <div class="feature-icon text-warning">
+                            <i class="fas fa-motorcycle"></i>
+                        </div>
+                        <h4><strong>Delivery Partner</strong></h4>
+                        <h5 class="text-warning"><strong>Rajesh Kumar</strong></h5>
+                        <p>📱 +91 98765-43210<br>
+                        🏆 5-Star Rated Delivery Expert<br>
+                        🚀 3+ Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="delivery-card scroll-animate">
+                        <div class="feature-icon text-success">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4><strong>Delivery Area</strong></h4>
+                        <p><strong>Dhanbad & Surrounding Areas</strong><br>
+                        📍 City Center: 15-20 mins<br>
+                        📍 Suburbs: 25-30 mins<br>
+                        📍 Extended Areas: 35-40 mins</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="delivery-card scroll-animate">
+                        <div class="feature-icon text-info">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <h4><strong>Live Delivery Time</strong></h4>
+                        <div class="live-timer" id="deliveryTimer">
+                            <strong>28:45</strong>
+                        </div>
+                        <p>⏰ Average delivery time today<br>
+                        🔥 Hot & Fresh Guaranteed!</p>
                     </div>
                 </div>
             </div>
@@ -677,169 +570,86 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-5">
+    <section id="menu" class="menu-section">
         <div class="container">
-            <h2 class="section-title"><strong>OUR DELICIOUS MENU</strong></h2>
+            <h2 class="section-title scroll-animate"><strong>Our Delicious Menu</strong></h2>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card food-item">
-                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=250&fit=crop" class="card-img-top" alt="Complete Lunch Thali">
-                        <div class="food-price"><strong>₹199</strong></div>
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>Complete Lunch Thali</strong></h5>
-                            <p class="card-text">Traditional home-style thali with dal, sabzi, rice, roti, pickle & sweet</p>
-                            <span class="badge bg-success">⭐ <strong>BESTSELLER</strong></span>
-                            <span class="badge bg-warning text-dark">🌿 <strong>HOMEMADE</strong></span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="food-card scroll-animate">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Complete Lunch Thali" class="food-image">
+                        <div class="food-content">
+                            <h4 class="food-title"><strong>🍛 Complete Lunch Thali</strong></h4>
+                            <p>Dal, Sabzi, Rice, 4 Rotis, Pickle, Papad, Sweet</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="food-price"><strong>₹149</strong></span>
+                                <button class="btn btn-sm btn-primary-custom">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card food-item">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=250&fit=crop" class="card-img-top" alt="Butter Chicken">
-                        <div class="food-price"><strong>₹249</strong></div>
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>Butter Chicken</strong></h5>
-                            <p class="card-text">Rich and creamy butter chicken with naan bread and basmati rice</p>
-                            <span class="badge bg-danger">🔥 <strong>SPICY</strong></span>
-                            <span class="badge bg-info">👨‍🍳 <strong>CHEF SPECIAL</strong></span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="food-card scroll-animate">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Homemade Dal Chawal" class="food-image">
+                        <div class="food-content">
+                            <h4 class="food-title"><strong>🍚 Homemade Dal Chawal</strong></h4>
+                            <p>Comfort food with aromatic dal and steamed rice</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="food-price"><strong>₹89</strong></span>
+                                <button class="btn btn-sm btn-primary-custom">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card food-item">
-                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=250&fit=crop" class="card-img-top" alt="Biryani">
-                        <div class="food-price"><strong>₹299</strong></div>
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>Hyderabadi Biryani</strong></h5>
-                            <p class="card-text">Aromatic basmati rice with tender meat, served with raita and shorba</p>
-                            <span class="badge bg-primary">👑 <strong>PREMIUM</strong></span>
-                            <span class="badge bg-secondary">🍽️ <strong>FULL MEAL</strong></span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="food-card scroll-animate">
+                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Roti Sabzi Combo" class="food-image">
+                        <div class="food-content">
+                            <h4 class="food-title"><strong>🫓 Roti Sabzi Combo</strong></h4>
+                            <p>Fresh rotis with seasonal vegetable curry</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="food-price"><strong>₹119</strong></span>
+                                <button class="btn btn-sm btn-primary-custom">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card food-item">
-                        <img src="https://images.unsplash.com/photo-1574653855686-b1103eb8dd70?w=400&h=250&fit=crop" class="card-img-top" alt="Rajma Rice">
-                        <div class="food-price"><strong>₹149</strong></div>
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>Rajma Chawal</strong></h5>
-                            <p class="card-text">Comforting kidney bean curry with steamed rice - pure home comfort</p>
-                            <span class="badge bg-success">🌱 <strong>VEGETARIAN</strong></span>
-                            <span class="badge bg-warning text-dark">💚 <strong>HEALTHY</strong></span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="food-card scroll-animate">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Special Biryani" class="food-image">
+                        <div class="food-content">
+                            <h4 class="food-title"><strong>🍚 Special Biryani</strong></h4>
+                            <p>Aromatic basmati rice with tender meat/vegetables</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="food-price"><strong>₹199</strong></span>
+                                <button class="btn btn-sm btn-primary-custom">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card food-item">
-                        <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=400&h=250&fit=crop" class="card-img-top" alt="Paneer Tikka">
-                        <div class="food-price"><strong>₹189</strong></div>
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>Paneer Tikka Masala</strong></h5>
-                            <p class="card-text">Grilled cottage cheese in rich tomato gravy with butter naan</p>
-                            <span class="badge bg-success">🌱 <strong>VEGETARIAN</strong></span>
-                            <span class="badge bg-info">🧄 <strong>GARLIC NAAN</strong></span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="food-card scroll-animate">
+                        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Traditional Sweets" class="food-image">
+                        <div class="food-content">
+                            <h4 class="food-title"><strong>🍮 Traditional Sweets</strong></h4>
+                            <p>Homemade gulab jamun, rasgulla, and more</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="food-price"><strong>₹79</strong></span>
+                                <button class="btn btn-sm btn-primary-custom">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card food-item">
-                        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=250&fit=crop" class="card-img-top" alt="South Indian">
-                        <div class="food-price"><strong>₹119</strong></div>
-                        <div class="card-body">
-                            <h5 class="card-title"><strong>Dosa Combo</strong></h5>
-                            <p class="card-text">Crispy dosa with sambar, coconut chutney and potato masala</p>
-                            <span class="badge bg-success">🌱 <strong>VEGETARIAN</strong></span>
-                            <span class="badge bg-primary">🥥 <strong>SOUTH INDIAN</strong></span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="food-card scroll-animate">
+                        <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Snacks Platter" class="food-image">
+                        <div class="food-content">
+                            <h4 class="food-title"><strong>🥘 Snacks Platter</strong></h4>
+                            <p>Samosa, pakoda, and chutney selection</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="food-price"><strong>₹99</strong></span>
+                                <button class="btn btn-sm btn-primary-custom">Add to Cart</button>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Delivery Partners Section -->
-    <section id="delivery" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title"><strong>OUR DELIVERY PARTNERS</strong></h2>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="partner-card">
-                        <div class="partner-avatar">
-                            <i class="fas fa-motorcycle"></i>
-                        </div>
-                        <h5><strong>Raj Kumar</strong></h5>
-                        <p class="text-muted">Senior Delivery Executive</p>
-                        <div class="live-status">
-                            <div class="live-dot"></div>
-                            <strong>ONLINE</strong>
-                        </div>
-                        <p class="mt-2"><small>⭐ 4.9 Rating • 500+ Deliveries</small></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="partner-card">
-                        <div class="partner-avatar">
-                            <i class="fas fa-bicycle"></i>
-                        </div>
-                        <h5><strong>Amit Singh</strong></h5>
-                        <p class="text-muted">Express Delivery Partner</p>
-                        <div class="live-status">
-                            <div class="live-dot"></div>
-                            <strong>ONLINE</strong>
-                        </div>
-                        <p class="mt-2"><small>⭐ 4.8 Rating • 350+ Deliveries</small></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="partner-card">
-                        <div class="partner-avatar">
-                            <i class="fas fa-car"></i>
-                        </div>
-                        <h5><strong>Priya Sharma</strong></h5>
-                        <p class="text-muted">Premium Delivery Partner</p>
-                        <div class="live-status">
-                            <div class="live-dot"></div>
-                            <strong>ONLINE</strong>
-                        </div>
-                        <p class="mt-2"><small>⭐ 4.9 Rating • 400+ Deliveries</small></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="partner-card">
-                        <div class="partner-avatar">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h5><strong>Suresh Gupta</strong></h5>
-                        <p class="text-muted">Bulk Order Specialist</p>
-                        <div class="live-status">
-                            <div class="live-dot"></div>
-                            <strong>ONLINE</strong>
-                        </div>
-                        <p class="mt-2"><small>⭐ 4.7 Rating • 600+ Deliveries</small></p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row mt-5">
-                <div class="col-md-4 text-center">
-                    <div class="delivery-info">
-                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
-                        <h4><strong>Real-Time Tracking</strong></h4>
-                        <p>Track your order live from kitchen to your doorstep</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="delivery-info">
-                        <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
-                        <h4><strong>Safe Delivery</strong></h4>
-                        <p>Contactless delivery with safety protocols</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="delivery-info">
-                        <i class="fas fa-thermometer-half fa-3x text-danger mb-3"></i>
-                        <h4><strong>Hot & Fresh</strong></h4>
-                        <p>Thermal bags ensure your food stays hot</p>
                     </div>
                 </div>
             </div>
@@ -847,64 +657,23 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title"><strong>GET IN TOUCH</strong></h2>
+            <h2 class="section-title text-white scroll-animate"><strong>Contact SWAAD SUTRA</strong></h2>
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <h4><strong>Contact Information</strong></h4>
-                        <div class="mb-3">
-                            <i class="fas fa-phone text-primary me-3"></i>
-                            <strong>+91 98765 43210</strong>
-                        </div>
-                        <div class="mb-3">
-                            <i class="fas fa-envelope text-primary me-3"></i>
-                            <strong>orders@swaadsutra.com</strong>
-                        </div>
-                        <div class="mb-3">
-                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                            <strong>Dhanbad, Jharkhand, India</strong>
-                        </div>
-                        <div class="mb-3">
-                            <i class="fas fa-clock text-primary me-3"></i>
-                            <strong>Open 24/7 • 365 Days</strong>
-                        </div>
-                        
-                        <div class="social-links mt-4">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <form class="contact-form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Phone Number" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane me-2"></i><strong>SEND MESSAGE</strong>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="d-flex align-items-center mb-3">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-info scroll-animate">
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="feature-icon text-warning mb-3">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h5><strong>Call Us</strong></h5>
+                                <p><strong>📞 +91 98765-12345</strong><br>
+                                Open: 10 AM - 10 PM</p>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="feature-icon text-info mb-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h5><strong>Email Us</strong></h
